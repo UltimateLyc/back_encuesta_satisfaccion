@@ -12,7 +12,7 @@ async function main () {
     dotenv.config({ path: '.env' }) // Config .env with dotenv
     await sequelize.sync({ force: process.env.FORCE })
     await sequelize.authenticate()
-    console.log('Connection with the server successful')
+    console.log(`Connection with the server successful on port ${process.env.DBPORT}`.green.underline)
     app.listen(process.env.PORT)
     console.log(`Server connection on port ${process.env.PORT}`.cyan.underline)
     defaultReactions()

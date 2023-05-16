@@ -7,7 +7,5 @@ export const defaultReactions = async () => {
         `)
   } catch (error) {
     console.error('Error al insertar datos por defecto:', error)
-  } finally {
-    sequelize.close()
   }
 }
