@@ -1,5 +1,4 @@
 import { DataTypes, sequelize } from '../config/config.js'
-import { Reaction } from './reactionModel.js'
 
 export const Comment = sequelize.define('comment', {
   id: {
@@ -34,14 +33,4 @@ export const Comment = sequelize.define('comment', {
       ]
     }
   ]
-})
-
-Comment.hasOne(Reaction, {
-  foreignKey: 'id_comment',
-  sourceKey: 'id'
-})
-
-Reaction.belongsTo(Comment, {
-  foreignKey: 'id_comment',
-  targetKey: 'id'
 })
