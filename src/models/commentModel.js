@@ -15,7 +15,7 @@ export const Comment = sequelize.define('comment', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  comments: {
+  comment: {
     type: DataTypes.TEXT,
     allowNull: true
   }
