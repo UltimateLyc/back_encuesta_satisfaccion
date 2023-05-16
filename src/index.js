@@ -17,7 +17,7 @@ async function main () {
     console.log(`Server connection on port ${process.env.PORT}`.cyan.underline)
     defaultReactions()
   } catch (error) {
-    console.log(error.red.underline)
+    console.log(error)
   }
 }
 
